@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roofing Business Valuation Calculator | Free Estimate</title>
+<meta name="description" content="Calculate what your roofing company is worth with our free valuation tool. Roofing-specific multiples and adjustments based on service type, certifications, and revenue.">
+<meta name="keywords" content="roofing business valuation calculator, roofing company worth, sell roofing business, roofing company value">
+<link rel="canonical" href="https://vivianashford.github.io/satellite-roofing/calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SDMM90P63D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SDMM90P63D');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Roofing Business Valuation Calculator",
+  "description": "Free roofing business valuation calculator with industry-specific multiples and adjustments.",
+  "url": "https://vivianashford.github.io/satellite-roofing/calculator.html",
+  "applicationCategory": "BusinessApplication",
+  "publisher": {"@type": "Organization", "name": "The Arena Partners", "url": "https://thearenapartners.com"}
+}
+</script>
+</head>
+<body style="margin:0;padding:0;background:#0a0a0a;color:#f0f0f0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;">
+
+<!-- HERO -->
+<section style="padding:60px 24px 40px;max-width:720px;margin:0 auto;text-align:center;">
+  <p style="margin:0 0 12px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C9A84C;">Step 2 of 3</p>
+  <h1 style="margin:0 0 16px;font-size:clamp(28px,5vw,44px);font-weight:900;line-height:1.1;letter-spacing:-0.03em;">Roofing Business Valuation Calculator</h1>
+  <p style="margin:0;color:#999;font-size:17px;">Answer 6 questions about your roofing company. Get an estimated valuation range in 60 seconds.</p>
+</section>
+
+<!-- CALCULATOR -->
+<section style="padding:24px 24px 40px;max-width:600px;margin:0 auto;">
+  <div id="calculatorForm" style="display:grid;gap:24px;">
+
+    <!-- Service Type -->
+    <div style="padding:24px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:2px;">
+      <label style="display:block;margin-bottom:12px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C9A84C;">Primary Service Type</label>
+      <select id="serviceType" style="width:100%;box-sizing:border-box;padding:14px 16px;background:#141414;border:1px solid #2a2a2a;border-radius:2px;color:#f0f0f0;font-family:'Inter',sans-serif;font-size:17px;min-height:48px;cursor:pointer;outline:none;-webkit-appearance:none;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22><path d=%22M1 1l5 5 5-5%22 stroke=%22%23999%22 stroke-width=%221.5%22 fill=%22none%22/></svg>');background-repeat:no-repeat;background-position:right 16px center;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#2a2a2a'">
+        <option value="residential">Residential Reroof</option>
+        <option value="storm">Storm / Insurance Restoration</option>
+        <option value="commercial">Commercial Roofing</option>
+        <option value="multi">Multi-Trade (Roof + Siding + Gutters)</option>
+        <option value="newconstruction">New Construction</option>
+        <option value="mixed">Mixed Services</option>
+      </select>
+    </div>
+
+    <!-- Annual Revenue -->
+    <div style="padding:24px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:2px;">
+      <label for="revenue" style="display:block;margin-bottom:12px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C9A84C;">Annual Revenue</label>
+      <div style="position:relative;">
+        <span style="position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#999;font-size:17px;pointer-events:none;">$</span>
+        <input type="text" id="revenue" inputmode="numeric" placeholder="5,000,000" style="width:100%;box-sizing:border-box;padding:14px 16px 14px 32px;background:#141414;border:1px solid #2a2a2a;border-radius:2px;color:#f0f0f0;font-family:'JetBrains Mono',monospace;font-size:17px;font-weight:500;min-height:48px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#2a2a2a'">
+      </div>
+    </div>
+
+    <!-- EBITDA Margin -->
+    <div style="padding:24px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:2px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <label style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C9A84C;">EBITDA Margin (Profit After Expenses)</label>
+        <span id="ebitdaValue" style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#f0f0f0;font-size:17px;">15%</span>
+      </div>
+      <input type="range" id="ebitda" min="5" max="25" value="15" style="width:100%;height:6px;-webkit-appearance:none;appearance:none;background:#2a2a2a;border-radius:3px;outline:none;cursor:pointer;" oninput="document.getElementById('ebitdaValue').textContent=this.value+'%'">
+      <div style="display:flex;justify-content:space-between;margin-top:8px;">
+        <span style="font-size:13px;color:#666;">5%</span>
+        <span style="font-size:13px;color:#666;">25%</span>
+      </div>
+    </div>
+
+    <!-- Recurring Revenue -->
+    <div style="padding:24px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:2px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <label style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C9A84C;">Recurring / Contract Revenue</label>
+        <span id="recurringValue" style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#f0f0f0;font-size:17px;">10%</span>
+      </div>
+      <input type="range" id="recurring" min="0" max="50" value="10" step="5" style="width:100%;height:6px;-webkit-appearance:none;appearance:none;background:#2a2a2a;border-radius:3px;outline:none;cursor:pointer;" oninput="document.getElementById('recurringValue').textContent=this.value+'%'">
+      <div style="display:flex;justify-content:space-between;margin-top:8px;">
+        <span style="font-size:13px;color:#666;">0%</span>
+        <span style="font-size:13px;color:#666;">50%</span>
+      </div>
+    </div>
+
+    <!-- Manufacturer Certifications -->
+    <div style="padding:24px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:2px;">
+      <label style="display:block;margin-bottom:12px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C9A84C;">Manufacturer Certifications</label>
+      <p style="margin:0 0 12px;font-size:14px;color:#666;">GAF Master Elite, Owens Corning Platinum, CertainTeed SELECT, etc.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <label style="display:flex;align-items:center;justify-content:center;padding:14px;background:#141414;border:2px solid #2a2a2a;border-radius:2px;cursor:pointer;min-height:48px;transition:border-color 0.2s;" id="certYesLabel">
+          <input type="radio" name="certs" value="yes" style="display:none;" onchange="document.getElementById('certYesLabel').style.borderColor='#C9A84C';document.getElementById('certNoLabel').style.borderColor='#2a2a2a'">
+          <span style="font-weight:600;font-size:16px;">Yes</span>
+        </label>
+        <label style="display:flex;align-items:center;justify-content:center;padding:14px;background:#141414;border:2px solid #2a2a2a;border-radius:2px;cursor:pointer;min-height:48px;transition:border-color 0.2s;" id="certNoLabel">
+          <input type="radio" name="certs" value="no" checked style="display:none;" onchange="document.getElementById('certNoLabel').style.borderColor='#C9A84C';document.getElementById('certYesLabel').style.borderColor='#2a2a2a'">
+          <span style="font-weight:600;font-size:16px;">No</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Number of Crews -->
+    <div style="padding:24px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:2px;">
+      <label for="crews" style="display:block;margin-bottom:12px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C9A84C;">Number of Crews</label>
+      <input type="number" id="crews" inputmode="numeric" min="1" max="100" value="5" placeholder="5" style="width:100%;box-sizing:border-box;padding:14px 16px;background:#141414;border:1px solid #2a2a2a;border-radius:2px;color:#f0f0f0;font-family:'JetBrains Mono',monospace;font-size:17px;font-weight:500;min-height:48px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#2a2a2a'">
+    </div>
+
+    <!-- Owner Role -->
+    <div style="padding:24px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:2px;">
+      <label style="display:block;margin-bottom:12px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C9A84C;">Your Role in Daily Operations</label>
+      <div style="display:grid;gap:10px;">
+        <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:#141414;border:2px solid #2a2a2a;border-radius:2px;cursor:pointer;min-height:48px;transition:border-color 0.2s;" id="roleDepLabel">
+          <input type="radio" name="ownerRole" value="dependent" style="display:none;" onchange="updateRoleStyles(this.value)">
+          <div>
+            <span style="font-weight:600;color:#f0f0f0;">I run every crew and estimate</span>
+            <p style="margin:4px 0 0;font-size:13px;color:#666;">Business stops if you take a vacation</p>
+          </div>
+        </label>
+        <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:#141414;border:2px solid #2a2a2a;border-radius:2px;cursor:pointer;min-height:48px;transition:border-color 0.2s;" id="roleKeyLabel">
+          <input type="radio" name="ownerRole" value="key" checked style="display:none;" onchange="updateRoleStyles(this.value)">
+          <div>
+            <span style="font-weight:600;color:#f0f0f0;">I make key decisions only</span>
+            <p style="margin:4px 0 0;font-size:13px;color:#666;">Crews run without you, but you handle big calls</p>
+          </div>
+        </label>
+        <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:#141414;border:2px solid #2a2a2a;border-radius:2px;cursor:pointer;min-height:48px;transition:border-color 0.2s;" id="roleIndLabel">
+          <input type="radio" name="ownerRole" value="independent" style="display:none;" onchange="updateRoleStyles(this.value)">
+          <div>
+            <span style="font-weight:600;color:#f0f0f0;">Business runs without me</span>
+            <p style="margin:4px 0 0;font-size:13px;color:#666;">Management team handles operations</p>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- Calculate Button -->
+    <button id="calcBtn" onclick="calculateValuation()" style="width:100%;padding:18px 32px;background:#C9A84C;color:#0a0a0a;font-family:'Inter',sans-serif;font-size:18px;font-weight:700;border:none;border-radius:2px;cursor:pointer;min-height:48px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 12px rgba(201,168,76,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">Calculate My Valuation</button>
+  </div>
+
+  <!-- RESULT (hidden initially) -->
+  <div id="resultSection" style="display:none;margin-top:40px;">
+    <div style="padding:40px 32px;background:#1a1a1a;border:1px solid #C9A84C;border-radius:2px;text-align:center;">
+      <p style="margin:0 0 8px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C9A84C;">Estimated Valuation Range</p>
+      <p id="valuationRange" style="margin:0 0 24px;font-family:'JetBrains Mono',monospace;font-size:clamp(32px,6vw,48px);font-weight:700;color:#C9A84C;letter-spacing:-0.02em;"></p>
+
+      <div style="display:grid;gap:12px;text-align:left;margin:0 0 32px;">
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #2a2a2a;">
+          <span style="color:#999;">Base Multiple</span>
+          <span id="baseMultiple" style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#f0f0f0;"></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #2a2a2a;">
+          <span style="color:#999;">Service Type Adj.</span>
+          <span id="serviceAdj" style="font-family:'JetBrains Mono',monospace;font-weight:500;"></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #2a2a2a;">
+          <span style="color:#999;">Recurring Revenue Adj.</span>
+          <span id="recurringAdj" style="font-family:'JetBrains Mono',monospace;font-weight:500;"></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #2a2a2a;">
+          <span style="color:#999;">Certifications Adj.</span>
+          <span id="certsAdj" style="font-family:'JetBrains Mono',monospace;font-weight:500;"></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #2a2a2a;">
+          <span style="color:#999;">Crew Size Adj.</span>
+          <span id="crewAdj" style="font-family:'JetBrains Mono',monospace;font-weight:500;"></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #2a2a2a;">
+          <span style="color:#999;">Owner Dependency Adj.</span>
+          <span id="ownerAdj" style="font-family:'JetBrains Mono',monospace;font-weight:500;"></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;">
+          <span style="color:#C9A84C;font-weight:600;">Adjusted Multiple</span>
+          <span id="adjustedMultiple" style="font-family:'JetBrains Mono',monospace;font-weight:700;color:#C9A84C;"></span>
+        </div>
+      </div>
+
+      <div style="padding:20px;background:#141414;border:1px solid #2a2a2a;border-radius:2px;margin:0 0 32px;">
+        <p id="insightText" style="margin:0;color:#999;font-size:15px;line-height:1.7;"></p>
+      </div>
+    </div>
+
+    <!-- NAME + PHONE GATE -->
+    <div style="margin-top:32px;padding:40px 32px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:2px;text-align:center;">
+      <h3 style="margin:0 0 8px;font-size:22px;font-weight:800;letter-spacing:-0.02em;">Want to Know How to Add $500K+ to That Number?</h3>
+      <p style="margin:0 0 24px;color:#999;font-size:15px;">Unlock our free 3-step training on maximizing your roofing business exit value.</p>
+      <form id="upgradeForm" style="display:grid;gap:16px;">
+        <input type="hidden" name="source" value="satellite-roofing">
+        <input type="hidden" name="step" value="training-unlock">
+        <input type="hidden" name="redirect" value="training.html">
+        <input type="hidden" id="hiddenEmail" name="email" value="">
+        <input type="hidden" id="hiddenValuation" name="valuation" value="">
+        <div style="text-align:left;">
+          <label for="fullName" style="display:block;margin-bottom:6px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#999;">Full Name</label>
+          <input type="text" id="fullName" name="name" required autocomplete="name" placeholder="John Smith" style="width:100%;box-sizing:border-box;padding:14px 16px;background:#141414;border:1px solid #2a2a2a;border-radius:2px;color:#f0f0f0;font-family:'Inter',sans-serif;font-size:17px;min-height:48px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#2a2a2a'">
+        </div>
+        <div style="text-align:left;">
+          <label for="phone" style="display:block;margin-bottom:6px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#999;">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" placeholder="(555) 123-4567" style="width:100%;box-sizing:border-box;padding:14px 16px;background:#141414;border:1px solid #2a2a2a;border-radius:2px;color:#f0f0f0;font-family:'Inter',sans-serif;font-size:17px;min-height:48px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#2a2a2a'">
+        </div>
+        <button type="submit" id="upgradeBtn" style="width:100%;padding:16px 32px;background:#C9A84C;color:#0a0a0a;font-family:'Inter',sans-serif;font-size:17px;font-weight:700;border:none;border-radius:2px;cursor:pointer;min-height:48px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 12px rgba(201,168,76,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">Unlock the Free Training</button>
+      </form>
+      <p style="margin:16px 0 0;font-size:13px;color:#666;">We'll never share your info. No spam. Just value.</p>
+    </div>
+  </div>
+</section>
+
+<footer style="padding:32px 24px;border-top:1px solid #2a2a2a;text-align:center;">
+  <p style="margin:0;font-size:13px;color:#666;">&copy; 2026 The Arena Partners. All rights reserved.</p>
+</footer>
+
+<script>
+// Grab email from URL param
+const urlParams = new URLSearchParams(window.location.search);
+const emailParam = urlParams.get('email');
+if (emailParam) document.getElementById('hiddenEmail').value = emailParam;
+
+// Format revenue input
+document.getElementById('revenue').addEventListener('input', function(e) {
+  let val = e.target.value.replace(/[^0-9]/g, '');
+  if (val) e.target.value = parseInt(val).toLocaleString();
+});
+
+function updateRoleStyles(val) {
+  document.getElementById('roleDepLabel').style.borderColor = val === 'dependent' ? '#C9A84C' : '#2a2a2a';
+  document.getElementById('roleKeyLabel').style.borderColor = val === 'key' ? '#C9A84C' : '#2a2a2a';
+  document.getElementById('roleIndLabel').style.borderColor = val === 'independent' ? '#C9A84C' : '#2a2a2a';
+}
+// Init
+updateRoleStyles('key');
+
+function calculateValuation() {
+  const rev = parseInt(document.getElementById('revenue').value.replace(/[^0-9]/g, ''));
+  if (!rev || rev < 100000) { alert('Please enter your annual revenue.'); return; }
+
+  const ebitdaPct = parseInt(document.getElementById('ebitda').value) / 100;
+  const ebitda = rev * ebitdaPct;
+  const serviceType = document.getElementById('serviceType').value;
+  const recurringPct = parseInt(document.getElementById('recurring').value);
+  const hasCerts = document.querySelector('input[name="certs"]:checked').value === 'yes';
+  const crews = parseInt(document.getElementById('crews').value) || 5;
+  const ownerRole = document.querySelector('input[name="ownerRole"]:checked').value;
+
+  // Base multiple from revenue
+  let baseLow, baseHigh;
+  if (rev < 1000000) { baseLow = 1.0; baseHigh = 2.0; }
+  else if (rev < 3000000) { baseLow = 2.0; baseHigh = 3.5; }
+  else if (rev < 5000000) { baseLow = 3.0; baseHigh = 4.5; }
+  else if (rev < 10000000) { baseLow = 3.5; baseHigh = 5.5; }
+  else { baseLow = 4.5; baseHigh = 6.5; }
+
+  let baseMid = (baseLow + baseHigh) / 2;
+
+  // Service type adjustment
+  let serviceAdj = 0;
+  if (serviceType === 'residential') serviceAdj = -0.5;
+  else if (serviceType === 'storm') serviceAdj = -1.0;
+  else if (serviceType === 'commercial') serviceAdj = 0.75;
+  else if (serviceType === 'multi') serviceAdj = 0.5;
+  else if (serviceType === 'newconstruction') serviceAdj = 0;
+  else if (serviceType === 'mixed') serviceAdj = 0.25;
+
+  // Recurring revenue adjustment
+  let recurAdj = 0;
+  if (recurringPct < 10) recurAdj = -0.5;
+  else if (recurringPct < 20) recurAdj = 0;
+  else if (recurringPct < 30) recurAdj = 0.5;
+  else recurAdj = 0.75;
+
+  // Certs adjustment
+  let certAdj = hasCerts ? 0.5 : -0.25;
+
+  // Crew adjustment
+  let crewAdj = 0;
+  if (crews <= 3) crewAdj = -0.25;
+  else if (crews <= 8) crewAdj = 0;
+  else if (crews <= 15) crewAdj = 0.25;
+  else crewAdj = 0.5;
+
+  // Owner role adjustment
+  let ownerAdj = 0;
+  if (ownerRole === 'dependent') ownerAdj = -1.0;
+  else if (ownerRole === 'key') ownerAdj = -0.5;
+  else ownerAdj = 0.5;
+
+  let totalAdj = serviceAdj + recurAdj + certAdj + crewAdj + ownerAdj;
+  let adjMultiple = Math.max(0.5, baseMid + totalAdj);
+
+  let valLow = Math.round(ebitda * (adjMultiple - 0.5));
+  let valHigh = Math.round(ebitda * (adjMultiple + 0.5));
+  if (valLow < 0) valLow = 0;
+
+  // Display
+  document.getElementById('valuationRange').textContent = '$' + valLow.toLocaleString() + ' - $' + valHigh.toLocaleString();
+  document.getElementById('baseMultiple').textContent = baseLow.toFixed(1) + ' - ' + baseHigh.toFixed(1) + 'x';
+
+  function fmtAdj(v) { return (v >= 0 ? '+' : '') + v.toFixed(2) + 'x'; }
+  function colorAdj(el, v) { el.style.color = v > 0 ? '#34C759' : v < 0 ? '#FF3B30' : '#f0f0f0'; }
+
+  document.getElementById('serviceAdj').textContent = fmtAdj(serviceAdj);
+  colorAdj(document.getElementById('serviceAdj'), serviceAdj);
+  document.getElementById('recurringAdj').textContent = fmtAdj(recurAdj);
+  colorAdj(document.getElementById('recurringAdj'), recurAdj);
+  document.getElementById('certsAdj').textContent = fmtAdj(certAdj);
+  colorAdj(document.getElementById('certsAdj'), certAdj);
+  document.getElementById('crewAdj').textContent = fmtAdj(crewAdj);
+  colorAdj(document.getElementById('crewAdj'), crewAdj);
+  document.getElementById('ownerAdj').textContent = fmtAdj(ownerAdj);
+  colorAdj(document.getElementById('ownerAdj'), ownerAdj);
+  document.getElementById('adjustedMultiple').textContent = adjMultiple.toFixed(1) + 'x';
+  document.getElementById('hiddenValuation').value = valLow + '-' + valHigh;
+
+  // Insight
+  let insights = [];
+  if (serviceAdj < 0) insights.push('Your service type is pulling your multiple down. Adding insurance restoration or commercial work could shift this significantly.');
+  if (recurAdj < 0) insights.push('Low recurring revenue is a red flag for buyers. Even a small commercial maintenance program would help.');
+  if (!hasCerts) insights.push('Manufacturer certifications like GAF Master Elite add credibility and warranty access that buyers value.');
+  if (ownerAdj < 0) insights.push('Owner dependency is your biggest risk factor. Buyers discount heavily when the business can\'t run without the owner.');
+  if (insights.length === 0) insights.push('Your roofing business is well-positioned for a premium exit. The key now is timing and finding the right buyer.');
+  document.getElementById('insightText').innerHTML = '<strong style="color:#f0f0f0;">Key insight:</strong> ' + insights[0];
+
+  document.getElementById('resultSection').style.display = 'block';
+  document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  gtag('event', 'calculator_complete', { 'event_category': 'engagement', 'event_label': 'roofing_valuation', 'value': Math.round((valLow + valHigh) / 2) });
+}
+
+document.getElementById('upgradeForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('upgradeBtn');
+  btn.textContent = 'Unlocking...';
+  btn.style.opacity = '0.7';
+  btn.disabled = true;
+  const data = {
+    name: document.getElementById('fullName').value,
+    phone: document.getElementById('phone').value,
+    email: document.getElementById('hiddenEmail').value,
+    valuation: document.getElementById('hiddenValuation').value,
+    source: 'satellite-roofing',
+    step: 'training-unlock',
+    redirect: 'training.html'
+  };
+  try {
+    await fetch('https://arena-api.jean-475.workers.dev/api/lead-capture/upgrade', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    });
+  } catch(err) {}
+  window.location.href = 'training.html?name=' + encodeURIComponent(data.name);
+});
+</script>
+
+<style>
+  input[type="range"]::-webkit-slider-thumb { -webkit-appearance:none; width:20px; height:20px; background:#C9A84C; border-radius:50%; cursor:pointer; border:none; }
+  input[type="range"]::-moz-range-thumb { width:20px; height:20px; background:#C9A84C; border-radius:50%; cursor:pointer; border:none; }
+</style>
+</body>
+</html>
