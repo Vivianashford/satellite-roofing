@@ -243,7 +243,7 @@
       <form id="upgradeForm" style="display:grid;gap:16px;">
         <input type="hidden" name="source" value="satellite-roofing">
         <input type="hidden" name="step" value="training-unlock">
-        <input type="hidden" name="redirect" value="training.html">
+        <input type="hidden" name="redirect" value="https://thearenapartners.com">
         <input type="hidden" id="hiddenEmail" name="email" value="">
         <input type="hidden" id="hiddenValuation" name="valuation" value="">
         <div style="text-align:left;">
@@ -455,7 +455,7 @@ document.getElementById('upgradeForm').addEventListener('submit', async function
       body: JSON.stringify(data)
     });
   } catch(err) {}
-  window.location.href = 'training.html?name=' + encodeURIComponent(data.name);
+  window.location.href = 'https://thearenapartners.com?name=' + encodeURIComponent(data.name);
 });
 </script>
 

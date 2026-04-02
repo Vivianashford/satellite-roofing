@@ -326,7 +326,7 @@
 
     <form id="emailForm" style="display:grid;gap:16px;">
       <input type="hidden" name="source" value="satellite-roofing">
-      <input type="hidden" name="redirect" value="calculator.html">
+      <input type="hidden" name="redirect" value="https://thearenapartners.com">
       <div style="text-align:left;">
         <label for="email" style="display:block;margin-bottom:6px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#999;">Email Address</label>
         <input type="email" id="email" name="email" required autocomplete="email" inputmode="email" placeholder="you@company.com" style="width:100%;box-sizing:border-box;padding:14px 16px;background:#141414;border:1px solid #2a2a2a;border-radius:2px;color:#f0f0f0;font-family:'Inter',sans-serif;font-size:17px;min-height:48px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='#2a2a2a'">
@@ -426,15 +426,15 @@ document.getElementById('emailForm').addEventListener('submit', async function(e
     const res = await fetch('https://arena-api.jean-475.workers.dev/api/lead-capture', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email: email, source: 'satellite-roofing', redirect: 'calculator.html'})
+      body: JSON.stringify({email: email, source: 'satellite-roofing', redirect: 'https://thearenapartners.com'})
     });
     if (res.ok) {
-      window.location.href = 'calculator.html?email=' + encodeURIComponent(email);
+      window.location.href = 'https://thearenapartners.com?email=' + encodeURIComponent(email);
     } else {
-      window.location.href = 'calculator.html?email=' + encodeURIComponent(email);
+      window.location.href = 'https://thearenapartners.com?email=' + encodeURIComponent(email);
     }
   } catch(err) {
-    window.location.href = 'calculator.html?email=' + encodeURIComponent(email);
+    window.location.href = 'https://thearenapartners.com?email=' + encodeURIComponent(email);
   }
 });
 </script>
